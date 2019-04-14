@@ -67,7 +67,7 @@ class App extends Component {
           <div className="ui input">
             <input value={this.state.searchTerm}
             onChange={this.handleSearchChange}
-            placeholder="Search for a game..."
+            placeholder="Search by game title..."
             />
             <i className="search icon" id="magic"></i>
           </div>
