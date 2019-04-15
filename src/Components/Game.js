@@ -2,7 +2,7 @@ import React from 'react'
 
 const Game = (props) => {
     return (
-        <div className="ui card wide column">
+        <div className="ui card four wide column">
           <a className="image" href="#">
             <img src={props.game.imgURL} alt={props.game.title}/>
           </a>

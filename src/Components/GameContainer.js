@@ -28,7 +28,7 @@ export default class GameContainer extends React.Component {
         return (
             <div>
             <Filter handleFilterChange={this.handleFilterChange} />
-            <div className="ui grid container" id="container-for-games">
+            <div id="container-for-games">
                 <GamesList games={this.filteredGameList()} handleMoreInfo={this.handleMoreInfo} handleClick={this.props.handleClick} />
             </div>
             </div>

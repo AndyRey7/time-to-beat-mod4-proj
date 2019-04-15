@@ -32,6 +32,11 @@
   }
 }
 
+.container {
+    display: flex;
+    padding-left: 1000px;
+}
+
 #magic {
     padding-top:10px;
     padding-left:10px;
@@ -43,7 +48,18 @@
     margin-top: 60px;
 }
 
+#container-for-completed-games {
+    padding-left: 150px;
+    margin-top: 50px;
+    margin-left: 50px;
+    color: #61dafb;
+}
+
 .game-filter {
     padding-top: 25px;
     font-size: 17px;
 }
+
+/* .paint {
+    background-color: #6ed3cf;
+} */

@@ -27,7 +27,7 @@ class App extends Component {
     handleAdd = (game) => {
         //console.log('yoyoyyo', game)
         this.setState({
-            beatenGames: [game, ...this.state.beatenGames]
+            beatenGames: [...this.state.beatenGames, game ]
         })
     }
 
@@ -61,7 +61,7 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
+      <div>
       <div className="ui menu">
         <div className="right item">
           <div className="ui input">
@@ -76,12 +76,13 @@ class App extends Component {
 
         <Form addNewGameToList={this.addNewGameToList} />
 
+        <div className="ui grid">
         <GameContainer games={this.state.games.filter(game =>
           game.title.toLowerCase().includes(this.state.searchTerm)
         )} handleClick={this.handleAdd}
         />
-
         <BeatenGames games={this.state.beatenGames} handleClick={this.handleDelete}/>
+        </div>
 
       </div>
     );
