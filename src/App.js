@@ -60,9 +60,12 @@ class App extends Component {
 
 
   render() {
+      let stylee = {
+          backgroundColor: '#3f3f3f'
+      }
     return (
       <div>
-      <div className="ui menu">
+      <div style={stylee} className="ui menu">
         <div className="right item">
           <div className="ui input">
             <input value={this.state.searchTerm}

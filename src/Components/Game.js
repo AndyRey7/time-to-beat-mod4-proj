@@ -3,13 +3,13 @@ import React from 'react'
 const Game = (props) => {
     return (
         <div className="ui card four wide column">
-          <a className="image" href="#">
+          <span className="image" href="#">
             <img src={props.game.imgURL} alt={props.game.title}/>
-          </a>
+          </span>
           <div className="content">
-            <a className="header" href="#">{props.game.title}</a>
+            <span className="header">{props.game.title}</span>
             <div className="meta">
-              <a>Hours taken to beat:{props.game.hours}</a>
+              <span>Hours taken to beat:{props.game.hours}</span>
             </div>
           </div>
             <div onClick={() => props.handleClick(props.game)} className="ui animated fade button" tabIndex="0">

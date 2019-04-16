@@ -15,21 +15,32 @@ export default class Form extends React.Component {
         })
     }
 
+    handleColor = (e) => {
+        let colorIn= ["#6ed3cf"]
+        e.target.style.color = colorIn
+
+    }
+
+    changeToBlack = e => {
+        let colorOut = ['#000']
+        e.target.style.color = colorOut
+    }
+
     render() {
         return (
-            <form className="ui equal width form" onSubmit={(e) => this.props.addNewGameToList(e, this.state)}>
+            <form className="ui equal width form" onMouseOver={this.handleColor} onMouseOut={this.changeToBlack} onSubmit={(e) => this.props.addNewGameToList(e, this.state)}>
                 <div className="fields">
                     <div className="field">
                         <label>Game Title</label>
-                        <input name="title" placeholder="enter game title" value={this.state.title} onChange={this.handleChange} />
+                        <input name="title" placeholder="enter game title" value={this.state.title} onChange={this.handleChange} required />
                     </div>
                     <div className="field">
                         <label>Hours taken to beat</label>
-                        <input name="hours" placeholder="enter hours to beat" value={this.state.hours} onChange={this.handleChange} />
+                        <input name="hours" placeholder="enter hours to beat" value={this.state.hours} onChange={this.handleChange} required />
                     </div>
                     <div className="field">
                         <label>ImageURL</label>
-                        <input name="imgURL" placeholder="enter game image" value={this.state.imgURL} onChange={this.handleChange} />
+                        <input name="imgURL" placeholder="enter game image" value={this.state.imgURL} onChange={this.handleChange} required />
                     </div>
                     <div className="field">
                         <label>Genre</label>
@@ -46,10 +57,10 @@ export default class Form extends React.Component {
                         </select>
                     </div>
                 </div>
-                <button class="ui animated button" type="submit">
-                    <div class="visible content">Add New Game</div>
-                    <div class="hidden content">
-                        <i class="right arrow icon"></i>
+                <button className="ui animated button" type="submit">
+                    <div className="visible content">Add New Game</div>
+                    <div className="hidden content">
+                        <i className="right arrow icon"></i>
                     </div>
                 </button>
 

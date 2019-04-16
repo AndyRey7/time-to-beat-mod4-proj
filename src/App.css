@@ -1,3 +1,6 @@
+
+
+
 .App {
   text-align: center;
 }
@@ -60,6 +63,7 @@
     font-size: 17px;
 }
 
-/* .paint {
-    background-color: #6ed3cf;
-} */
+
+.paint {
+    background-color: #3f3f3f ;
+}

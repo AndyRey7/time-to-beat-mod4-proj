@@ -1,10 +1,10 @@
-import React, { Component } from 'react';
+import React from 'react';
 
 const Filter = (props) => {
   return (
     <div className="game-filter">
     Filter By Genre
-    <i class="filter icon"></i>
+    <i className="filter icon"></i>
       <select onChange={props.handleFilterChange}>
         <option value="All">All</option>
         <option value="Action">Action</option>

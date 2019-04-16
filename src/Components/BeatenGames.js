@@ -13,9 +13,14 @@ export default class BeatenGames extends React.Component {
             paddingLeft: '700px',
             paddingTop: '220px'
         }
+
+        let divStyle1 = {
+            fontFamily: "Times New Roman",
+            color: '#4ABDAC'
+        }
         return (
             <div style={divStyle}>
-            <h2>Completed</h2>
+            <h2 style={divStyle1}>Completed</h2>
             {this.gamesCompleted()}
             </div>
         )
