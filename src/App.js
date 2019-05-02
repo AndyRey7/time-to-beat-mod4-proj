@@ -4,6 +4,7 @@ import './App.css';
 import GameContainer from './Components/GameContainer.js'
 import BeatenGames from './Components/BeatenGames.js'
 import Form from './Components/Form'
+import Search from './Components/Search'
 
 
 class App extends Component {
@@ -15,7 +16,7 @@ class App extends Component {
     }
 
     componentDidMount() {
-        fetch('http://localhost:3000/api/v1/games')
+        fetch('http://localhost:3001/api/v1/games')
         .then(res => res.json())
         .then(data => {
             this.setState({
@@ -40,7 +41,7 @@ class App extends Component {
 
     addNewGameToList = (e, newGame) => {
         e.preventDefault()
-        fetch('http://localhost:3000/api/v1/games', {
+        fetch('http://localhost:3001/api/v1/games', {
             method: 'POST',
             headers: {
                 "Content-Type": "application/json"
@@ -60,22 +61,9 @@ class App extends Component {
 
 
   render() {
-      let stylee = {
-          backgroundColor: '#3f3f3f'
-      }
     return (
       <div>
-      <div style={stylee} className="ui menu">
-        <div className="right item">
-          <div className="ui input">
-            <input value={this.state.searchTerm}
-            onChange={this.handleSearchChange}
-            placeholder="Search by game title..."
-            />
-            <i className="search icon" id="magic"></i>
-          </div>
-        </div>
-      </div>
+        <Search handleSearchChange={this.handleSearchChange} searchTerm={this.state.searchTerm} />
 
         <Form addNewGameToList={this.addNewGameToList} />
 

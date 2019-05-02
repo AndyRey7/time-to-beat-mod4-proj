@@ -4,7 +4,7 @@ import Game from './Game'
 const GamesList = (props) => {
 
 //console.log('props in gameslist', props)
-const gameData = props.games.map(game => <Game handleMoreInfo={props.handleMoreInfo} handleClick={props.handleClick} key={game.id} game={game} />)
+const gameData = props.games.map(game => <Game  handleClick={props.handleClick} key={game.id} game={game} />)
 
     let font = {
         fontFamily: "Times New Roman",

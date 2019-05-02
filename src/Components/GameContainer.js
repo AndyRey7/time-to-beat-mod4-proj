@@ -29,7 +29,7 @@ export default class GameContainer extends React.Component {
             <div>
             <Filter handleFilterChange={this.handleFilterChange} />
             <div id="container-for-games">
-                <GamesList games={this.filteredGameList()} handleMoreInfo={this.handleMoreInfo} handleClick={this.props.handleClick} />
+                <GamesList games={this.filteredGameList()}  handleClick={this.props.handleClick} />
             </div>
             </div>
         )

@@ -6,7 +6,7 @@ export default class Form extends React.Component {
         title: '',
         genre: 'Action',
         imgURL: '',
-        hours: 0
+        hours: ''
     }
 
     handleChange = (e) => {
@@ -16,13 +16,13 @@ export default class Form extends React.Component {
     }
 
     handleColor = (e) => {
-        let colorIn= ["#6ed3cf"]
+        let colorIn= "#6ed3cf"
         e.target.style.color = colorIn
 
     }
 
     changeToBlack = e => {
-        let colorOut = ['#000']
+        let colorOut = '#000'
         e.target.style.color = colorOut
     }
 
@@ -63,8 +63,7 @@ export default class Form extends React.Component {
                         <i className="right arrow icon"></i>
                     </div>
                 </button>
-
-                </form>
+            </form>
         )
     }
 }

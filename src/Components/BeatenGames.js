@@ -6,7 +6,7 @@ export default class BeatenGames extends React.Component {
 
 
     gamesCompleted = () => {
-        return this.props.games.filter((v,i) => this.props.games.indexOf(v) === i).map(game => <Game game={game} handleClick={this.props.handleClick} />)
+        return this.props.games.filter((k,v) => this.props.games.indexOf(k) === v).map(game => <Game game={game} handleClick={this.props.handleClick} />)
     }
     render() {
         let divStyle = {
